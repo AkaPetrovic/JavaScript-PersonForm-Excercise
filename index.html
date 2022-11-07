@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excercise Plain JavaScript Form</title>
+    <!-- Google Fonts - "Inter" font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body onload="initializeDate()">
+    <div class="wrapper">
+      <h1>Person Form</h1>
+
+      <form id="person-form" action="" onsubmit="formSubmit(event)">
+        <p id="error-message"></p>
+        <label class="required" for="firstname">Firstname</label>
+        <input
+          type="text"
+          name="firstname"
+          id="firstname"
+          placeholder="Enter firstname..."
+        />
+        <label class="required" for="lastname">Lastname</label>
+        <input
+          type="text"
+          name="lastname"
+          id="lastname"
+          placeholder="Enter lastname..."
+        />
+        <label class="required" for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter email..."
+        />
+        <label for="telephone">Telephone</label>
+        <input
+          type="text"
+          name="telephone"
+          id="telephone"
+          placeholder="Format: 065/1234567"
+        />
+        <label class="required" for="birthday">Birthday</label>
+        <input type="date" name="birthday" id="birthday" />
+        <div class="btn-group">
+          <label for="employment">Employment</label>
+          <input type="checkbox" name="employment" id="employment" />
+        </div>
+        <label class="required" class="required" for="btn-group">Gender</label>
+        <div class="btn-group">
+          <input type="radio" name="gender" id="gender-male" checked />
+          <span>Male</span>
+          <input type="radio" name="gender" id="gender-female" />
+          <span>Female</span>
+        </div>
+        <button>Submit</button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>
